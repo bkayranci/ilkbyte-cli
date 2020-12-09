@@ -26,8 +26,8 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Lint with flake8
       run: |
-        flake8 ilkbyte --count --show-source --statistics --ignore E501
-        flake8 ilkbyte --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+        flake8 ilkbyte_cli --count --show-source --statistics --ignore E501
+        flake8 ilkbyte_cli --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
 #    - name: Test with pytest
 #      run: |
 #        pytest

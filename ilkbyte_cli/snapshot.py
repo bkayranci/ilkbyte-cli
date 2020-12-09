@@ -1,7 +1,4 @@
-from typing import Optional
-
 import typer
-from ilkbyte.utils import PowerAction
 
 from ilkbyte_cli.utils import get_client
 

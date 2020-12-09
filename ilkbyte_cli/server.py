@@ -58,10 +58,9 @@ def ip_logs(server_name: str):
 
 
 @server_app.command()
-def ip_logs(server_name: str, ip: str, rdns: str):
+def ip_rdns(server_name: str, ip: str, rdns: str):
     client = get_client()
     typer.echo(client.get_ip_rdns(server_name, ip, rdns))
-
 
 
 if __name__ == '__main__':

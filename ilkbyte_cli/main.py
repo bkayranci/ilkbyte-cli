@@ -20,6 +20,8 @@ app.add_typer(domain_app)
 @app.command(name='config', )
 def configure(secret_key: str = None, access_key: str = None, host: str = 'https://api.ilkbyte.com',
               config_file: str = global_config_file):
+    if secret_key is None and access_key is None:
+        typer.echo('You can get api credentials on https://www.ilkbyte.com/panel/account/settings')
     if secret_key is None:
         secret_key = typer.prompt('secret_key', hide_input=True)
 

@@ -73,7 +73,7 @@ def cli_pretty(message: dict, response: dict):
                     typer.echo(dotty_response.get(v))
                 else:
                     typer.echo(response)
-        except Exception as _:
+        except Exception:
             typer.echo(response)
 
     else:

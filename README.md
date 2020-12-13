@@ -9,7 +9,10 @@ pip install ilkbyte-cli
 ```terminal
 ilkbyte config
 ilkbyte account users
-ilkbyte server list-plans
+ilkbyte account --raw users
+ilkbyte server plans
+ilkbyte server plans --help
+ilkbyte server plans --package
 ```
 
 ## Development

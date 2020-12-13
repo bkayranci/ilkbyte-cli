@@ -1,20 +1,23 @@
 from configparser import ConfigParser
 
 import typer
-from ilkbyte_cli.utils import global_config_file
 
 from ilkbyte_cli.account import account_app
+from ilkbyte_cli.backup import backup_app
+from ilkbyte_cli.domain import domain_app
 from ilkbyte_cli.server import server_app
 from ilkbyte_cli.snapshot import snapshot_app
+from ilkbyte_cli.utils import global_config_file
 
 app = typer.Typer()
-
 app.add_typer(account_app)
 app.add_typer(server_app)
 app.add_typer(snapshot_app)
+app.add_typer(backup_app)
+app.add_typer(domain_app)
 
 
-@app.command(name='config')
+@app.command(name='config', )
 def configure(secret_key: str = None, access_key: str = None, host: str = 'https://api.ilkbyte.com',
               config_file: str = global_config_file):
     if secret_key is None:
